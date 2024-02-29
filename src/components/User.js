@@ -7,7 +7,9 @@ const User = ({ user }) => {
       <p>Name: {user.name}</p>
       <p>Email: {user.email}</p>
       {/* Add more user details here as needed */}
+      <button onClick>Your Profile</button>
     </div>
+    
   );
 };
 
