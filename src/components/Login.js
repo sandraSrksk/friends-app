@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 const Login = () => {
-  // Logic for handling login functionality
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Implement login functionality here
+  const handleLogin = async () => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+      // User signed in successfully
+    } catch (error) {
+      // Handle login errors
+    }
   };
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Login Page</h2>
       {/* Add login form or button */}
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin}>Sign In</button>
     </div>
   );
 };

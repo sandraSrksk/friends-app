@@ -1,29 +1,29 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
 
-const firebaseConfig = {
-  // Your Firebase config
-};
+// const firebaseConfig = {
+//   // Your Firebase config
+// };
 
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
-export const auth = firebase.auth();
+// export const auth = firebase.auth();
 
-// components/Login.js
-import React from 'react';
-import { auth } from '../services/firebase';
+// // components/Login.js
+// import React from 'react';
+// import { auth } from '../services/firebase';
 
-const Login = () => {
-  const signInWithGoogle = async () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    await auth.signInWithPopup(provider);
-  };
+// const Login = () => {
+//   const signInWithGoogle = async () => {
+//     const provider = new firebase.auth.GoogleAuthProvider();
+//     await auth.signInWithPopup(provider);
+//   };
 
-  return (
-    <div>
-      <button onClick={signInWithGoogle}>Sign In with Google</button>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <button onClick={signInWithGoogle}>Sign In with Google</button>
+//     </div>
+//   );
+// };
 
-export default Login;
+// export default firebase;
